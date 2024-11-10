@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremy</title>
+    <link rel="stylesheet" href="/Proyecto10.Netflix_page/Css/Style.css" />
+    <link rel="shortcut icon" href="img/Logoletras.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="#" class="logo"
+          ><img
+            src="/Proyecto10.Netflix_page/img/pngwing.com (2).png"
+            width="250"
+            alt="logo"
+          />
+        </a>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tv shows</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="search" />
+          <button class="btnbuscar"><span class="material-icons">search</span></button>
+        </div>
+      </header>
+      <section class="banner">
+        <img src="/Proyecto10.Netflix_page/img/Un_Show_Más_-_La_Película.jpg" alt="personajes" class="bg" />
+        <span class="SombraImg"></span>
+        <div class="content">
+          <img
+            src="/Proyecto10.Netflix_page/img/Netflix movie.png "
+            alt=""
+            class="movietitle"
+            width="550"
+          />
+          <img
+            src="/Proyecto10.Netflix_page/img/Regular-show-the-movie-logo.png"
+            alt=""
+          />
+          <h4>
+            <span>2016</span>
+            <span><i>16+</i></span>
+            <span>Movie</span>
+          </h4>
+          <p>
+            Después de crear por accidente un "tiempornado" que los transporta
+            en el tiempo, Mordecai y Rigby viajan en el tiempo para detener a un
+            malvado entrenador de volleyball e intentar salvar el universo y su
+            amistad.
+          </p>
+          <div class="buttons">
+            <a href="#">play</a>
+            <a href="#">My list</a>
+          </div>
+        </div>
+        <a href="#" class="play" ondblclick="toggleVideo();"><img src="/Proyecto10.Netflix_page/img/Play.png" alt="" width="21" height="20"/>Watch Trailer</a>
+      </section>
+      <section class="trailer">
+        <video src="/Proyecto10.Netflix_page/img/y2matecom-regular-show-the-movie-official-trailer-1080_QXxtec55.mp4" controls="true"></video>
+        <img src="/Proyecto10.Netflix_page/img/Close.png" alt="" class="close" onclick="toggleVideo();">
+        <div class="video-container">
+  
+                
+            </video>
+      </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+     <script>
+        function reproducirVideo() {
+            const video = document.getElementById("miVideo");
+            
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+  </body>
+</html>
