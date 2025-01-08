@@ -62,36 +62,31 @@
             <a href="#">My list</a>
           </div>
         </div>
-        <a href="#" class="play" ondblclick="toggleVideo();"><img src="/img/Play.png" alt="" width="21" height="20"/>Watch Trailer</a>
-      </section>
-      <section class="trailer">
-        <video src="/img/y2matecom-regular-show-the-movie-official-trailer-1080_QXxtec55.mp4" controls="true"></video>
-        <img src="/img/Close.png" alt="" class="close" onclick="toggleVideo();">
-        <div class="video-container">
-  
-                
-            </video>
-      </section>
-    </main>
-    <script>
-        function toggleVideo(){
-            const trailer= document.querySelector(".trailer");
-            const video = document.querySelector("video");
-            trailer.classList.toggle("active");
-            video.currentTime=0;
-            video.pause();
-        }
-    </script>
-     <script>
-        function reproducirVideo() {
+        <a href="#" class="play" ondblclick="toggleVideo();">
+          <img src="/Proyecto10.Netflix_page/img/Play.png" alt="Play Button" width="21" height="20" />Watch Trailer
+        </a>
+        
+        <section class="trailer">
+          <video id="miVideo" src="/Proyecto10.Netflix_page/img/y2mate.com - The Movie Trailer  Regular Show  Cartoon Network_360p.mp4" controls muted></video>
+          <img src="/Proyecto10.Netflix_page/img/Close.png" alt="Close Button" class="close" onclick="toggleVideo();" />
+        </section>
+        
+        <script>
+          function toggleVideo() {
+            const trailer = document.querySelector(".trailer");
             const video = document.getElementById("miVideo");
-            
-            if (video.paused) {
-                video.play();
+        
+            // Alternar visibilidad de la sección de video
+            trailer.classList.toggle("active");
+        
+            // Si el trailer está activo, reproducir el video
+            if (trailer.classList.contains("active")) {
+              video.currentTime = 0; // Reiniciar el video
+              video.play();
             } else {
-                video.pause();
+              video.pause();
             }
-        }
-    </script>
+          }
+        </script>
   </body>
 </html>
